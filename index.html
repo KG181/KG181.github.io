@@ -1,87 +1,63 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
   <title>KG181’s Blog</title>
+  <meta name="author" content="杨开国">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KG181’s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="KG181’s Blog">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KG181’s Blog">
-<meta name="twitter:description">
+
   
-    <link rel="alternative" href="/atom.xml" title="KG181’s Blog" type="application/atom+xml">
+  <meta property="og:site_name" content="KG181’s Blog"/>
+
   
+    <meta property="og:image" content="undefined"/>
   
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="KG181’s Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 
 </head>
+
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">KG181’s Blog</a>
-      </h1>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">KG181’s Blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
+        <div class="icon"></div>
+        <time datetime="2015-04-20T11:09:55.000Z"><a href="/2015/04/20/怎样动态计算UITableViewCell高度/">2015-04-20</a></time>
+      
+      
   
-    <article id="post-怎样动态计算UITableViewCell高度" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/20/怎样动态计算UITableViewCell高度/" class="article-date">
-  <time datetime="2015-04-20T11:09:55.000Z" itemprop="datePublished">2015-04-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/20/怎样动态计算UITableViewCell高度/"> 怎样动态计算UITableViewCell高度</a>
-    </h1>
+    <h1 class="title"><a href="/2015/04/20/怎样动态计算UITableViewCell高度/"> 怎样动态计算UITableViewCell高度</a></h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+    </header>
+    <div class="entry">
       
         <h2 id="UILabel_in_UITableViewCell">UILabel in UITableViewCell</h2><h3 id="Auto_Layout">Auto Layout</h3><ul>
 <li><p>UILabel的属性Lines设为了0表示显示多行。Auto Layout约束一定要建立完完整</p>
@@ -128,38 +104,34 @@
 <h3 id="Manual_Layout-1">Manual Layout</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath </span><br><span class="line">&#123; </span><br><span class="line">C4 *cell = [<span class="keyword">self</span><span class="variable">.tableView</span> dequeueReusableCellWithIdentifier:<span class="string">@"C4"</span>]; </span><br><span class="line">cell<span class="variable">.t</span><span class="variable">.text</span> = [<span class="keyword">self</span><span class="variable">.tableData</span> objectAtIndex:indexPath<span class="variable">.row</span>]; </span><br><span class="line">[cell<span class="variable">.t</span> sizeToFit]; </span><br><span class="line"><span class="keyword">return</span> cell; </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123; </span><br><span class="line">C4 *cell = (C4 *)<span class="keyword">self</span><span class="variable">.prototypeCell</span>; </span><br><span class="line"><span class="built_in">NSString</span> *str = [<span class="keyword">self</span><span class="variable">.tableData</span> objectAtIndex:indexPath<span class="variable">.row</span>]; </span><br><span class="line">cell<span class="variable">.t</span><span class="variable">.text</span> = str; </span><br><span class="line"><span class="built_in">CGSize</span> s =  [cell<span class="variable">.t</span> sizeThatFits:<span class="built_in">CGSizeMake</span>(cell<span class="variable">.t</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.width</span>, FLT_MAX)]; </span><br><span class="line"><span class="built_in">CGFloat</span> defaultHeight = cell<span class="variable">.contentView</span><span class="variable">.frame</span><span class="variable">.size</span><span class="variable">.height</span>; </span><br><span class="line"><span class="built_in">CGFloat</span> height = s<span class="variable">.height</span> &gt; defaultHeight ? s<span class="variable">.height</span> : defaultHeight; </span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>  + height; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/20/怎样动态计算UITableViewCell高度/" data-id="ci8ps7nqz0001u5q96ttoyt8y" class="article-share-link">Share</a>
+    <footer>
       
+        
+        
       
+      <div class="clearfix"></div>
     </footer>
   </div>
-  
 </article>
 
 
+
+
+  <article class="post">
   
-    <article id="post-mac操作大全" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/20/mac操作大全/" class="article-date">
-  <time datetime="2015-04-20T11:07:03.000Z" itemprop="datePublished">2015-04-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-04-20T11:07:03.000Z"><a href="/2015/04/20/mac操作大全/">2015-04-20</a></time>
+      
+      
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/20/mac操作大全/">mac快捷键大全</a>
-    </h1>
+    <h1 class="title"><a href="/2015/04/20/mac操作大全/">mac快捷键大全</a></h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+    </header>
+    <div class="entry">
       
         <h3 id="MAC_OS_X_快捷键">MAC OS X 快捷键</h3><p>Command+C:拷贝<br>Command+V:粘贴<br>Command+W:关闭窗口<br>Command+M:最小化窗口<br>Command+Q:退出程序<br>Command+I:显示文件/文件夹属性<br>Command+Backspace:删除<br>Command+shift+3:捕获整个屏幕<br>Command+shift+4:捕获选择的区域<br>Command+shift+4+space:捕获某个应用程序的窗口<br>Command+F:在应用程序中搜索<br>Command+Space:用Spotlight进行桌面搜索<br>Command-A 全选<br>Option-Command-A 取消选择所有<br>Shift-Command-G 前往文件夹<br>Shift-Command-H 打开当前所登录用户帐户的个人文件夹<br>Option-Command-M 最小化所有窗口<br>Command-N 新建 Finder 窗口<br>Shift-Command-N 新建文件夹<br>Command-O 打开所选项<br>Command-Z 还原/重做<br>Command-1 以图标显示<br>Command-2 列表方式显示<br>Command-3 以分栏方式显示<br>Command-4 以 Cover Flow 方式显示(Mac OS X 10.5 或更高版本)<br>Command-Shift-? 打开 Mac 帮助<br>Option-Shift-Command-Esc(按住三秒钟)- 仅 Mac OS X v10.5、v10.6 或更高版本<br>强制退出最前面的应用程序 Command-Delete<br>移到废纸篓 Shift-Command-Delete 清倒废纸篓  </p>
 <h3 id="UNix_常用命令">UNix 常用命令</h3><p>￼1.ls 显⽰示⽂文件名,等同于dos下dir命令<br>￼命令格式:ls [option] file option:<br>-l 显示详细列表<br>域1 :文件类型和文件权限<br>域2 :文件连接数<br>域3 :文件所有者名字<br>域4 :文件用户组名字<br>域5 :文件长度<br>域6-8 :最近修改日期<br>域9 :文件名<br>-a 显示所有文件,包含隐藏文件(以. 起头的文件名) -R 显示文件及所有子目录<br>-F 显示文件(后跟<em>)和目录(后跟/)<br>-d 与l选项合用,显示目录名而非其内容<br>注意目录分隔符为“/”,与dos相反 命令格式:cd dirname<br>命令格式:cat filename<br>命令格式:more filename<br>命令格式:<br>   1.rm [-r] filename (filename 可为档名,或档名缩写符号.)<br>￼￼￼   2.cd ⺫⽬目录转换,等同于dos下cd命令<br>￼￼￼   3.pwd 显⽰示当前路径<br>   4.cat 显⽰示⽂文件内容,等同于dos下type命令<br>￼￼￼   5.more 以分⻚页⽅方式查看⽂文件内容.<br>   ￼￼￼6.rm 删除⽂文件<br>￼<br>￼例子:<br>rm file1 删除档名为 file1 之文档.<br>rm file? 删除档名中有五个字元,前四个字元为file 之所有文档. rm f</em> 删除档名中,以 f 为字首之所有文档.<br>rm -r dir1 删除目录 dir1,及其下所有文档及子目录.<br>命令格式: mkdir [-p] directory-name Exmaple :<br>mkdir dir1 建立一新目录 dir1.<br>mkdir -p dir/subdir 直接创建多级目录<br>目录必须首先为空 命令格式: rmdir directory<br>命令格式: cp [-r] source destination<br>例子:<br>cp file1 file2 将文档 file1 复制成 file2<br>cp file1 dir1 将文档 file1 复制到目录 dir1 下,文件名仍为 file1. cp /tmp/file1 . 将目录 /tmp 下的文档 file1复制到现行目录下, 档名仍为 file1.<br>cp /tmp/file1 file2 将目录 /tmp 下的文档 file1现行目录下,档名 为file2<br>cp -r dir1 dir2 (recursive copy) 复制整个目录.<br>若目录 dir2 存在,则将目录dir1,及其所有文档和子目录, 复制到目录 dir2 下,新目录名称为dir1.若目录dir2不存在, 则将dir1,及其所有文档和子目录,复制为目录 dir2.<br>￼￼￼7.mkdir 创建⺫⽬目录<br>￼￼￼8.rmdir 删除⺫⽬目录<br>￼￼￼9.cp ⽂文档复制<br>命令格式: mv source destination<br>例子:<br>mv file1 file2 将文档 file1,更改档名为 file2.<br>mv file1 dir1 将文档 file1,移到目录 dir1 下,档名仍为 file1. mv dir1 dir2 若目录 dir2 不存在,则将目录 dir1,及其所有档 案和子目录,移到目录 dir2 下,新目录名称为 dir1.<br>若目录 dir2 不存在,则将dir1,及其所有文档和子 目录,更改为目录 dir2.<br>11.du 查看目录所占磁碟容量<br>命令格式: du [-sk] directory<br>例子 :<br>du dir1 显示目录 dir1 的总容量及其次目录的容量<br>du -sk dir1 显示目录 dir1 的总容量,以k bytes为计量<br>12.find 文件查找<br>命令格式: find dir -name filename command<br>例子:<br>find . -name hello -print 寻找目前目录及所有的子目录内叫 hello的文档.<br>find . -ctime +7 -print 找出七天内未被更动的文档<br>find . -size +2000m -print 找出大小超过2000 bytes的文档<br>find /tmp -user b1234567 -print 在/tmp下属於b1234567的文档 find . -name ‘<em>.c’ -exec rm {} 删除所有的.c档<br>find . -name test</em> -print 显示当前目录及其子目录文件名前4 位为test的文件名</p>
@@ -167,38 +139,34 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/20/mac操作大全/" data-id="ci8ps7nrg0002u5q98hhh9f55" class="article-share-link">Share</a>
+    <footer>
       
+        
+        
       
+      <div class="clearfix"></div>
     </footer>
   </div>
-  
 </article>
 
 
+
+
+  <article class="post">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/18/hello-world/" class="article-date">
-  <time datetime="2015-04-18T07:21:13.000Z" itemprop="datePublished">2015-04-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-04-18T07:21:13.000Z"><a href="/2015/04/18/hello-world/">2015-04-18</a></time>
+      
+      
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/18/hello-world/">Hello World</a>
-    </h1>
+    <h1 class="title"><a href="/2015/04/18/hello-world/">Hello World</a></h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
+    </header>
+    <div class="entry">
       
         <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
@@ -212,91 +180,59 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/18/hello-world/" data-id="ci8ps7nri0003u5q9m6avmtzd" class="article-share-link">Share</a>
+    <footer>
       
+        
+        
       
+      <div class="clearfix"></div>
     </footer>
   </div>
-  
 </article>
 
 
+
+
+
+<nav id="pagination">
   
   
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  
-    
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2015/04/20/怎样动态计算UITableViewCell高度/"> 怎样动态计算UITableViewCell高度</a>
-          </li>
-        
-          <li>
-            <a href="/2015/04/20/mac操作大全/">mac快捷键大全</a>
-          </li>
-        
-          <li>
-            <a href="/2015/04/18/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
   
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2015 杨开国<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    <div class="clearfix"></div>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+  <footer id="footer" class="inner"><div class="alignleft">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  &copy; 2015 杨开国
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
 
-  </div>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
 </body>
 </html>
